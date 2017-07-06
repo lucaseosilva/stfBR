@@ -1,10 +1,22 @@
 Package: stfBR
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Title: STF package
+Version: 0.0.0.1
+Authors@R: person("Lucas", "Silva", email = "lukasemanoel@gmail.com",
+                  role = c("aut", "cre"))
+Description: Extrai os meta-dados referentes às ações de controle concentrado do Supremo Tribunal Federal (STF)
 Depends: R (>= 3.4.0)
-License: What license is it under?
+License: GPL (>= 2)
+Depends: rvest, 
+	 stringr, 
+	 dplyr,
+	 tidyr,
+	 httr
+Imports: rvest, 
+	 stringr, 
+	 dplyr,
+	 tidyr,
+	 httr
 Encoding: UTF-8
-LazyData: true
+LazyLoad: yes 
+LazyData: yes
 RoxygenNote: 6.0.1
