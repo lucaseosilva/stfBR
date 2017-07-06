@@ -1,8 +1,7 @@
 #' Capturar processos
 #'
 #' Esta função captura os meta-dados de todas as ações de controle concentrado
-#' do Supremo Tribunal Federal (STF). Para isso, o usuário precisa especificar
-#' apenas a categoria da ação  e o
+#' do Supremo Tribunal Federal (STF).
 #'
 #' @param categoria O tipo de ação: ADIN, ADPF, ADCN ou ADOM
 #' @param min Tamanho mínimo da série de processos coletada. min = 1 é o default, com isso coleta todas as ações
