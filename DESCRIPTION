@@ -7,8 +7,6 @@ Description: Extrai os meta-dados referentes as acoes de controle concentrado do
 License: GPL (>= 2)
 Depends: R (>= 3.2.0)
 Imports: rvest, stringr, dplyr, tidyr, httr
-Suggests: knitr, rmarkdown
-VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: TRUE
 RoxygenNote: 6.0.1
