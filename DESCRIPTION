@@ -1,22 +1,12 @@
 Package: stfBR
 Title: STF package
 Version: 0.0.0.1
-Authors@R: person("Lucas", "Silva", email = "lukasemanoel@gmail.com",
-                  role = c("aut", "cre"))
-Description: Extrai os meta-dados referentes às ações de controle concentrado do Supremo Tribunal Federal (STF)
-Depends: R (>= 3.4.0)
+Author: Lucas E. O. Silva [aut, cre]
+Maintainer: Lucas E. O. Silva <lukasemanoel@gmail.com>
+Description: Extrai os meta-dados referentes ?s a??es de controle concentrado do Supremo Tribunal Federal (STF)
 License: GPL (>= 2)
-Depends: rvest, 
-	 stringr, 
-	 dplyr,
-	 tidyr,
-	 httr
-Imports: rvest, 
-	 stringr, 
-	 dplyr,
-	 tidyr,
-	 httr
+Depends: R (>= 3.2.0)
+Imports: rvest, stringr, dplyr, tidyr, httr
 Encoding: UTF-8
-LazyLoad: yes 
-LazyData: yes
+LazyData: TRUE
 RoxygenNote: 6.0.1

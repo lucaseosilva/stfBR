@@ -9,7 +9,6 @@
 #' @return Um dataframe com os meta-dados das ações
 #' @import rvest stringr dplyr tidyr httr
 #' @export
-#'
 extractProcess <- function(categoria, min = 1){
 
   processos <- data.frame()
