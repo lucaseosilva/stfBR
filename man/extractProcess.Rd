@@ -7,15 +7,18 @@
 extractProcess(categoria, min = 1)
 }
 \arguments{
-\item{categoria}{O tipo de ação: ADIN, ADPF, ADCN ou ADOM}
+\item{categoria}{O tipo de acao: ADIN, ADPF, ADCN ou ADOM}
 
-\item{min}{Tamanho mínimo da série de processos coletada. min = 1 é o default, com isso coleta todas as ações
-de uma categoria}
+\item{min}{Tamanho minimo da serie de processos coletada. min = 1 e o default, com isso coleta todas as acoes
+de uma categoria.}
 }
 \value{
-Um dataframe com os meta-dados das ações
+Um dataframe com os meta-dados das acoes
 }
 \description{
-Esta função captura os meta-dados de todas as ações de controle concentrado
+Esta funcao captura os meta-dados de todas as acoes de controle concentrado
 do Supremo Tribunal Federal (STF).
+}
+\details{
+Os limites sao atualizados pelo autor do pacote conforme as atualizacoes do STF
 }

@@ -1,12 +1,14 @@
 Package: stfBR
 Title: STF package
-Version: 0.0.0.1
+Version: 1.0.0.1
 Author: Lucas E. O. Silva [aut, cre]
 Maintainer: Lucas E. O. Silva <lukasemanoel@gmail.com>
-Description: Extrai os meta-dados referentes ?s a??es de controle concentrado do Supremo Tribunal Federal (STF)
+Description: Extrai os meta-dados referentes as acoes de controle concentrado do Supremo Tribunal Federal (STF)
 License: GPL (>= 2)
 Depends: R (>= 3.2.0)
 Imports: rvest, stringr, dplyr, tidyr, httr
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: TRUE
 RoxygenNote: 6.0.1

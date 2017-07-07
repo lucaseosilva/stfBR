@@ -1,12 +1,12 @@
 #' Capturar processos
-#'
-#' Esta função captura os meta-dados de todas as ações de controle concentrado
+#' @description Esta funcao captura os meta-dados de todas as acoes de controle concentrado
 #' do Supremo Tribunal Federal (STF).
-#'
-#' @param categoria O tipo de ação: ADIN, ADPF, ADCN ou ADOM
-#' @param min Tamanho mínimo da série de processos coletada. min = 1 é o default, com isso coleta todas as ações
-#' de uma categoria
-#' @return Um dataframe com os meta-dados das ações
+#' @usage extractProcess(categoria, min = 1)
+#' @param categoria O tipo de acao: ADIN, ADPF, ADCN ou ADOM
+#' @param min Tamanho minimo da serie de processos coletada. min = 1 e o default, com isso coleta todas as acoes
+#' de uma categoria.
+#' @details Os limites sao atualizados pelo autor do pacote conforme as atualizacoes do STF
+#' @return Um dataframe com os meta-dados das acoes
 #' @import rvest stringr dplyr tidyr httr
 #' @export
 extractProcess <- function(categoria, min = 1){
