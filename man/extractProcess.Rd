@@ -9,8 +9,9 @@ extractProcess(categoria, min = 1)
 \arguments{
 \item{categoria}{O tipo de acao: ADIN, ADPF, ADCN ou ADOM}
 
-\item{min}{Tamanho minimo da serie de processos coletada. min = 1 e o default, com isso coleta todas as acoes
-de uma categoria.}
+\item{minimo}{Inicio da serie de processos a ser coletada. min = 1 e o default}
+
+\item{maximo}{Fim da serie de processos}
 }
 \value{
 Um dataframe com os meta-dados das acoes

@@ -3,31 +3,34 @@
 #' do Supremo Tribunal Federal (STF).
 #' @usage extractProcess(categoria, min = 1)
 #' @param categoria O tipo de acao: ADIN, ADPF, ADCN ou ADOM
-#' @param min Tamanho minimo da serie de processos coletada. min = 1 e o default, com isso coleta todas as acoes
-#' de uma categoria.
+#' @param minimo Inicio da serie de processos a ser coletada. min = 1 e o default
+#' @param maximo Fim da serie de processos
 #' @details Os limites sao atualizados pelo autor do pacote conforme as atualizacoes do STF
 #' @return Um dataframe com os meta-dados das acoes
 #' @import rvest stringr dplyr tidyr httr
 #' @export
-extractProcess <- function(categoria, min = 1){
+extractProcess <- function(categoria, minimo = 1, maximo){
+
+  min <- as.numeric(minimo)
+  max <- as.numeric(maximo)
 
   processos <- data.frame()
 
   url_base <- "http://www.stf.jus.br/portal/peticaoInicial/verPeticaoInicial.asp?base=TIPO&s1=%20$%20&processo=NUM"
 
-
-  # valores atualizados em 06 de julho de 2017 - 10:00
-  switch(categoria,
-         ADIN={max=5740},
-         ADPF={max=471},
-         ADCN={max=46},
-         ADOM={max=41}
-  )
-
+  if(is.null(max) | is.na(max) | max == 0){
+    # valores atualizados em 06 de julho de 2017 - 10:00
+    switch(categoria,
+           ADIN={max=5740},
+           ADPF={max=471},
+           ADCN={max=46},
+           ADOM={max=41}
+    )
+  }
   j=min
   i=min
   while(j<=max){
-    while(i>=min){
+    while(i<=max){
       url_peticao <- gsub("TIPO",categoria,url_base)
       url_peticao <- gsub("NUM",i,url_peticao)
 

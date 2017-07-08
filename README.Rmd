@@ -1,0 +1,52 @@
+---
+title: "stfBR package"
+author: Lucas E. O. Silva
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Sobre o pacote
+
+O pacote `stfBR` extrai todos os meta-dados referentes às Ações de Controle Concentrado de Constitucionalidade do [Supremo Tribunal Federal (STF)](http://www.stf.jus.br/portal/peticaoInicial/pesquisarPeticaoInicial.asp).
+
+## Como funciona
+
+A extração é realizada através da função `extractProcess()`. Nela, o usuário precisará informar três parâmetros: `categoria`, `minimo` e `maximo`.
+
+1. `categoria`: se refere ao tipo de ação desejada (ADIN, ADPF, ADCN, ADOM);
+1. `minimo`: se refere ao valor de início do intervalo desejado (por default, `minimo`=1);
+1. `maximo`: se refere ao limite do intervalo desejado. Caso não seja informado, será assumido o valor das últimas ações presentes no site do STF no dia 06 de julho de 2017 (ADIN = 5740, ADPF = 471, ADCN = 46 e ADOM = 41).
+
+## Retorno
+
+Ao fim do procedimento, a função retorna um dataframe com 26 variáveis com as especificações de cada ação:
+
+1. tipo;
+1. num_acao;
+1. url_peticao;
+1. url_acompanhamento;
+1. nome_completo;
+1. origem;
+1. relator;
+1. requerente;
+1. requerido;
+1. entrada;
+1. distribuido;
+1. dispositivo;
+1. fundamentacao;
+1. resultado_liminar;
+1. decisao_plenario_liminar;
+1. data_plenario_liminar;
+1. data_publicacao_liminar;
+1. resultado_final;
+1. decisao_final;
+1. data_julgamento_final;
+1. data_publicacao_final;
+1. decisao_mono_final;
+1. decisao_mono_liminar;
+1. incidentes;
+1. ementa;
+1. indexacao.
